@@ -1,4 +1,5 @@
-import gui.mainMenuElements.MainMenu;
+import gui.constants.EnvironmentConstants;
+import gui.mainMenu.MainMenu;
 
 import javax.swing.*;
 
@@ -18,10 +19,17 @@ public class JumpNRunRunner implements Runnable{
      */
     @Override
     public void run() {
+        EnvironmentConstants.init();
+        startFrame();
+    }
+
+    /**
+     * Initializes the frame and starts it with the main menu showing
+     */
+    private void startFrame() {
         frame.setContentPane(new MainMenu());
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //frame.setUndecorated(true);
         frame.setVisible(true);
     }
 }

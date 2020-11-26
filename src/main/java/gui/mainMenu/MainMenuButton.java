@@ -1,9 +1,9 @@
-package gui.mainMenuElements;
+package gui.mainMenu;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class MainMenuButton extends JButton {
+public abstract class MainMenuButton extends JButton {
 
     /**
      * Creates a button for the main menu.
@@ -15,7 +15,7 @@ public class MainMenuButton extends JButton {
     public MainMenuButton(Dimension dimension, int y, String labelText) {
         this.setSize(dimension);
         this.setAlignmentY(y);
-        this.setName(labelText);
+        this.add(new JLabel(labelText));
     }
 
 }
