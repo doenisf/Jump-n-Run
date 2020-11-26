@@ -21,7 +21,7 @@ public class JumpNRunRunner implements Runnable{
         frame.setContentPane(new MainMenu());
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setUndecorated(true);
+        //frame.setUndecorated(true);
         frame.setVisible(true);
     }
 }
